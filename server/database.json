@@ -1,9 +1,14 @@
 {
   "users": [
-    {"id": 1, "username": "john"},
-    {"id": 2, "username": "mark"}
+    {
+      "id": 1,
+      "username": "john"
+    },
+    {
+      "id": 2,
+      "username": "mark"
+    }
   ],
-
   "items": [
     {
       "payeeName": "Rahul",
@@ -95,6 +100,20 @@
       "price": 1000,
       "date": "2022-04-05",
       "id": 13
-    }  
+    },
+    {
+      "expenseDescription": "Trek",
+      "payeeName": "Rahul",
+      "price": 1542,
+      "date": "2022-11-05T01:14:29.625Z",
+      "id": 14
+    },
+    {
+      "expenseDescription": "Car Repair",
+      "payeeName": "Ramesh",
+      "price": 2567,
+      "date": "2022-11-05T01:16:38.177Z",
+      "id": 15
+    }
   ]
 }

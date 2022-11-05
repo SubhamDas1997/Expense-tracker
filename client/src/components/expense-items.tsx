@@ -37,6 +37,3 @@ const ExpenseItems = ({expenseItems}: itemsModel) => {
 }
 
 export default ExpenseItems;
-
-
-

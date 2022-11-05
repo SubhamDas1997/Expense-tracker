@@ -6,4 +6,6 @@ interface IExpenseItem {
     id: number
 }
 
+export type INewExpenseItem = Omit<IExpenseItem, "id">;
+
 export default IExpenseItem;

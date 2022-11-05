@@ -1,23 +1,12 @@
 import { Table } from "react-bootstrap";
 import IExpenseItem from "../models/item";
+import getAllPayeeNames from "../services/expense-utils"
 
 type ExpensesByPayeeModel = {
     expenseItems: IExpenseItem[];
 }
 
 const ExpensesByPayees = ({ expenseItems }: ExpensesByPayeeModel) => {
-    const getAllPayeeNames = () => {
-        const uniquePayeeName: string[] = [];
-
-        expenseItems.forEach((expenseItems) => {
-            let payeeName = expenseItems.payeeName;
-
-            if (!uniquePayeeName.includes(payeeName)) uniquePayeeName.push(payeeName);
-        })
-        
-        return uniquePayeeName;
-    }
-
     const getTotalExpensesByPayee = (payeeName: string) => {
         let totalExpense = 0;
 
@@ -40,7 +29,7 @@ const ExpensesByPayees = ({ expenseItems }: ExpensesByPayeeModel) => {
                 </thead>
                 <tbody>
                     {
-                        getAllPayeeNames().map((payeeName, index) => (
+                        getAllPayeeNames(expenseItems).map((payeeName, index) => (
                             <tr key={index + 1}>
                                 <td>{index + 1}</td>
                                 <td>{payeeName}</td>
